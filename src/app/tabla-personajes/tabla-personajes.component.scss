@@ -1,23 +1,5 @@
 
 
-    .casa-lannister {
-        background-color: #ffcc00;
-    }
-    .casa-stark {
-        background-color: #a8a2a2;
-    }   
-    .casa-targaryen {
-        background-color: #d67878;
-    }
-    .casa-baratheon {
-        background-color: #444444;
-    }
-    .casa-greyjoy {
-        background-color: #8b8b5a;
-    }
-    .casa-tyrell {
-        background-color: #5f835f;
-    }
 
     .carta {
         width: 100%;
@@ -31,4 +13,81 @@
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         margin: 10px;
     }
+
+
+
+
+// Estilos para filas según la casa (ya existentes)
+.casa-lannister {
+        background-color: #ffcc00;
+}
+.casa-stark {
+        background-color: #a8a2a2;
+}
+.casa-targaryen {
+        background-color: #d67878;
+}
+.casa-baratheon {
+        background-color: #444444;
+        color: #fff;
+}
+.casa-greyjoy {
+        background-color: #8b8b5a;
+}
+.casa-tyrell {
+        background-color: #5f835f;
+}
+
+// Estilos generales para la tabla de personajes
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #222c3c;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    filter: brightness(0.97);
+    transition: filter 0.2s;
+}
+
+img {
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    object-fit: cover;
+}
+
+button {
+    background: #222c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #3a4a6b;
+}
 
