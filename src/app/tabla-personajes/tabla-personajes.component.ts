@@ -1,4 +1,4 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, EventEmitter, inject, Input, OnDestroy, OnInit, Output, Signal } from '@angular/core';
 import { GotService } from '../services/got.service';
 import { Personaje } from '../models/personaje.model';
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-tabla-personajes',
   standalone: true,
-  imports: [NgFor, NgIf, NgClass],
+  imports: [NgFor, NgIf, NgClass, NgStyle],
   templateUrl: './tabla-personajes.component.html',
   styleUrl: './tabla-personajes.component.scss'
 })
@@ -17,6 +17,7 @@ export class TablaPersonajesComponent implements OnInit, OnDestroy {
   @Output() personajeSeleccionado = new EventEmitter<Personaje>();
   sumaGot: number = 0;
   subscripcion!: Subscription;
+  mostrar: boolean = false;
 
   gotService = inject(GotService);
 

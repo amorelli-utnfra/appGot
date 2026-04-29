@@ -1,5 +1,5 @@
-
-<table>
+<button (click)="mostrar = !mostrar">Mostrar</button>
+<table *ngIf="mostrar">
     <thead>
         <title>Personajes de Got</title>
         <tr>
@@ -21,7 +21,7 @@
                 'casa-greyjoy': personaje.family === 'House Greyjoy',
                 'casa-tyrell': personaje.family === 'House Tyrell'
             }"
-        
+
         >
         <td>{{ personaje.fullName }} {{i}}</td>
         <td>{{ personaje.title }}</td>

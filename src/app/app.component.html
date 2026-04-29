@@ -14,18 +14,23 @@
 <div class="main">
 
   <div [style.width.%]="50">
-    <app-tabla-personajes (personajeSeleccionado)="personajeSeleccionado = $event"> </app-tabla-personajes>
+    <app-tabla-personajes (personajeSeleccionado)="personajeSeleccionado = $event">
+       </app-tabla-personajes>
   </div>
 
   <div [style.width.%]="50">
 
     <app-carta-personaje>
-      
+ 
       <ng-container [ngTemplateOutlet]="cardContent"></ng-container>
 
-      <img imagen [src]="personajeSeleccionado?.imageUrl" alt="{{ personajeSeleccionado?.name }}" width="100">
-
+      <img imagen [src]="personajeSeleccionado?.imageUrl" alt="{{ personajeSeleccionado?.name }}" width="100"> 
+ 
     </app-carta-personaje>
+
+
+
+    
 
     </div>
 
