@@ -3,11 +3,13 @@ import { Component, EventEmitter, inject, Input, OnDestroy, OnInit, Output, Sign
 import { GotService } from '../services/got.service';
 import { Personaje } from '../models/personaje.model';
 import { Subscription } from 'rxjs';
+import { HoverZoomDirective } from '../directivas/hover-zoom.directive';
+import { IsStarkDirective } from '../directivas/is-stark.directive';
 
 @Component({
   selector: 'app-tabla-personajes',
   standalone: true,
-  imports: [NgFor, NgIf, NgClass, NgStyle],
+  imports: [NgFor, NgIf, NgClass, NgStyle, HoverZoomDirective, IsStarkDirective],
   templateUrl: './tabla-personajes.component.html',
   styleUrl: './tabla-personajes.component.scss'
 })
